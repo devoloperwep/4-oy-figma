@@ -10,6 +10,9 @@
   @include respond(md) {
     margin-bottom: 1.5rem;
   }
+  @include respond(sm) {
+    margin-bottom: 5rem;
+  }
   &__container {
     @include flex($align: center, $justify: space-between, $gap: 2rem);
   }
@@ -36,6 +39,9 @@
 // clients
 .client {
   margin-bottom: 2.7rem;
+  @include respond(sm) {
+    margin-bottom: 5rem;
+  }
   @include respond(md) {
     margin-bottom: 3rem;
   }
@@ -66,6 +72,9 @@
 // system
 .system {
   margin-bottom: 2.6rem;
+  @include respond(sm) {
+    margin-bottom: 5rem;
+  }
   text-align: center;
   &__title {
     width: 100%;
@@ -115,6 +124,9 @@
 // user
 .user {
   margin-bottom: 3.3rem;
+  @include respond(sm) {
+    margin-bottom: 5rem;
+  }
   &__container {
     @include flex($justify: space-between, $align: center);
   }
@@ -136,5 +148,187 @@
     width: 100%;
     max-width: 500px;
     margin-bottom: 2.2rem;
+  }
+}
+// help
+.help {
+  padding-top: 4.4rem;
+  padding-bottom: 4.4rem;
+  margin-bottom: 3.3rem;
+  background-color: $color-silver;
+  @include respond(sm) {
+    margin-bottom: 5rem;
+  }
+  &__container {
+    @include flex($justify: space-between);
+    @include respond(md) {
+      @include flex($justify: center, $wrap: wrap);
+    }
+  }
+  &__title {
+    font-size: 3rem;
+  }
+  &__about {
+    width: 100%;
+    max-width: 350px;
+    margin-bottom: 0.5rem;
+  }
+  &__description {
+    color: #18191f;
+    font-size: 1.3rem;
+  }
+  &__list {
+    width: 100%;
+    max-width: 400px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem 1rem;
+    @include respond(md) {
+      margin-top: 2rem;
+      grid-template-columns: 1fr;
+    }
+  }
+  &__item {
+    @include flex($gap: 1rem);
+    &-title {
+      font-size: 2rem;
+      line-height: 1.1;
+      color: $color-dark-gray;
+    }
+  }
+}
+// devices
+.devices {
+  padding-top: 2.2rem;
+  padding-bottom: 2.2rem;
+  margin-bottom: 3.3rem;
+  @include respond(sm) {
+    margin-bottom: 5rem;
+  }
+  background-color: $color-silver;
+  &__container {
+    @include flex($justify: space-between, $gap: 1rem);
+  }
+  &__image {
+    border-radius: 5px;
+    @include respond(lg) {
+      display: none;
+    }
+  }
+  &__about {
+    width: 100%;
+    max-width: 700px;
+  }
+  &__description {
+    font-size: 1.2rem;
+    margin-bottom: 1.1rem;
+  }
+  &__title {
+    font-size: 1.4rem;
+    margin-bottom: 0.6rem;
+  }
+  &__parag {
+    font-size: 1.3rem;
+    margin-bottom: 2.2rem;
+  }
+  &__list {
+    @include flex($gap: 5rem, $align: center, $wrap: wrap);
+    @include respond(md) {
+      @include flex($gap: 3rem, $align: center, $wrap: wrap);
+    }
+  }
+  &__link {
+    font-size: 1.4rem;
+    i {
+      margin-left: 0.5rem;
+    }
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+}
+// caring
+.caring {
+  margin-bottom: 6.1rem;
+  &__container {
+    text-align: center;
+  }
+  &__title {
+    color: $color-dark-gray;
+    margin-bottom: 0.5rem;
+  }
+  &__description {
+    width: 100%;
+    max-width: 500px;
+    font-weight: 400;
+    @include m-center;
+    margin-bottom: 1.1rem;
+  }
+  &__list {
+    @include flex($justify: space-between, $gap: 1rem, $wrap: wrap);
+    @include respond(1180px) {
+      @include flex($justify: center, $gap: 3rem, $wrap: wrap);
+    }
+  }
+  &__item {
+    &-img {
+      border-radius: 5px;
+      @include respond(sm) {
+        width: 100%;
+        min-width: 300px;
+      }
+    }
+    &__about {
+      width: 100%;
+      max-width: 300px;
+      padding: 1.1rem;
+      background-color: $color-silver;
+      @include m-center;
+      margin-top: -20%;
+      z-index: 1;
+      position: relative;
+      border-radius: 5px;
+    }
+    &-description {
+      font-size: 1.8rem;
+      margin-bottom: 1.1rem;
+    }
+    &-link {
+      color: $color-primary;
+      font-size: 1.5rem;
+      i {
+        margin-left: 0.5rem;
+      }
+    }
+  }
+}
+// free
+.free {
+  padding-top: 2.4rem;
+  padding-bottom: 3rem;
+  background-color: $color-silver;
+
+  &__container {
+    @include m-center;
+    text-align: center;
+  }
+  &__title {
+    width: 100%;
+    max-width: 600px;
+    font-size: 4.5rem;
+    line-height: 1.2;
+    margin-bottom: 2.2rem;
+    color: #263238;
+    @include m-center;
+    @include respond(md) {
+      font-size: 3.5rem;
+    }
+  }
+  &__btn {
+    display: inline;
+    font-size: 1.3rem;
+    i {
+      margin-left: 0.5rem;
+    }
   }
 }

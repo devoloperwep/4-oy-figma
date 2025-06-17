@@ -1,0 +1,74 @@
+.footer {
+  padding-top: 4.4rem;
+  padding-bottom: 4.4rem;
+  background-color: #263238;
+  color: $color-white;
+  &__container {
+    @include flex($justify: space-between);
+    @include respond(lg) {
+      @include flex($direction: column, $align: center, $gap: 1rem);
+    }
+  }
+  &__description {
+    margin-top: 2.7rem;
+    width: 100%;
+    max-width: 200px;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: $color-silver;
+    margin-bottom: 4.7rem;
+  }
+  &__icons {
+    @include flex($align: center, $gap: 1.1rem);
+    i {
+      padding: 1rem;
+      border-radius: 50%;
+      background-color: #3b464c;
+      color: $color-white;
+      font-size: 1.5rem;
+      transition: 0.3s;
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
+  &__table {
+    @include flex($justify: flex-end);
+    @include respond(570px) {
+      display: none;
+    }
+    th {
+      text-align: start;
+      font-size: 1.6rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      padding: 1rem 3rem;
+      a {
+        color: $color-white;
+      }
+    }
+    td {
+      padding: 0.3rem 3rem;
+      font-weight: 400;
+      font-size: 1.2rem;
+      a {
+        color: $color-silver;
+      }
+      .table__input {
+        padding: 0.8rem 0.8rem;
+        background-color: #ffffff42;
+        border: none;
+        border-radius: 0.5rem;
+        background-image: url("../images/send.png");
+        background-repeat: no-repeat;
+        background-position: center right 10px;
+        outline: none;
+        color: white;
+        &::placeholder {
+          color: #d9dbe1;
+        }
+      }
+    }
+  }
+}
