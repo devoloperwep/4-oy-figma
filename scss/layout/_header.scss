@@ -1,0 +1,47 @@
+.header {
+  margin-top: 1.1rem;
+  margin-bottom: 1.1rem;
+  &__container {
+    @include flex($align: center, $justify: space-between);
+  }
+  .site-logo {
+    width: 100%;
+    max-width: 108px;
+    height: 17px;
+  }
+  .sitenav {
+    @include flex($align: center, $gap: 2.2rem);
+    &__list {
+      @include flex($gap: 1.7rem);
+      @include respond(sm) {
+        display: none;
+      }
+    }
+    &__link {
+      color: $color-dark-gray;
+      font-weight: 500;
+      &:hover {
+        color: rgba(0, 0, 0, 0.506);
+      }
+    }
+  }
+  &__btn {
+    font-weight: 500;
+    i {
+      margin-left: 0.6rem;
+    }
+  }
+}
+
+.sitenav__item {
+}
+.sitenav__link {
+}
+.btn {
+}
+.header__btn {
+}
+.fa-solid {
+}
+.fa-arrow-right {
+}

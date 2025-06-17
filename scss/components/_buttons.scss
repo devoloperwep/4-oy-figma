@@ -1,0 +1,10 @@
+.btn {
+  padding: 0.97rem 2.227rem;
+  background-color: $color-primary;
+  color: $color-white;
+  font-weight: 500;
+  border-radius: 2.78px;
+  @include respond(sm) {
+    padding: 1rem 2rem;
+  }
+}
