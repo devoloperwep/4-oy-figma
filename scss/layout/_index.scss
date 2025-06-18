@@ -185,11 +185,16 @@
     grid-gap: 2rem 1rem;
     @include respond(md) {
       margin-top: 2rem;
+    }
+    @include respond(sm) {
       grid-template-columns: 1fr;
+      gap: 3rem;
     }
   }
   &__item {
+    cursor: pointer;
     @include flex($gap: 1rem);
+    @include m-center;
     &-title {
       font-size: 2rem;
       line-height: 1.1;
